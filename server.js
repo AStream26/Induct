@@ -14,31 +14,16 @@ mongoose.connect(DB,{
     console.log('Connected');
 });
 
-const tourSchema = mongoose.Schema({
-     name:{
-         type:String,
-         unique:true,
-         required:[true,'A tour name is required']
-     },
-     price :{
-         type:Number,
-         required:[true,'A tour must have a price']
-     },
-     rating:{
-         type:Number,
-         default:4.5
-     }
-});
-const Tour = mongoose.model('Tour',tourSchema);
-const newTour = new Tour({
-name:'The Great India Tour',
-price:112,
-rating:4.9
-});
-newTour.save().then(res=>{
-    console.log(res);
-})
-app.listen(3000,()=>{
+// const newTour = new Tour({
+//     name:'The Great India Tour',
+//     price:112,
+//     rating:4.9
+//     });
+//     newTour.save().then(res=>{
+//        console.log(res);
+//     });
+
+app.listen(4000,()=>{
     console.log("Server Started");
 });
  
