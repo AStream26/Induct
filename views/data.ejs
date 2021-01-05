@@ -48,10 +48,10 @@
         : <%=tour.othercell%> </h4></div>
   <br>
 
-    <div>
-        <a href=<%=`/users/${tour.Sno+1}` %>  class="btn btn-dark btn-lg btn-block"  >NEXT</a>
-    </div>
-
+  <div class="row">
+    <div class="col"><a href=<%=`/users/${tour.Sno-1}` %>  class="btn btn-dark btn-lg btn-block"  >BACK</a></div>
+    <div class="col"><a href=<%=`/users/${tour.Sno+1}` %>  class="btn btn-dark btn-lg btn-block"  >NEXT</a></div>
+</div>
 
 
 </div>
