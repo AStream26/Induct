@@ -2,17 +2,35 @@ const { findSourceMap } = require('module');
 const mongoose  = require('mongoose');
 const slugify = require('slugify');
 const Data = mongoose.Schema({
-    SN0:Number,
+    Sno:Number,
     Name:String,
-    RollNumber:Number,
-    Course:String,
-    EmailID:String,
+    Registration_Number:Number,
+    E_mail:String,
     Branch:String,
     CGPA:Number,
-    perc10:String,
-    perc12:String,
-    Contact:Number,
-    Active_Backlogs:String
+    Contact_Number:Number,
+    Active_Backlogs:String,
+    Describe:String,
+    Hobbies:String,
+    Strength:String,
+    Weakness:String,
+    Special_Interest:String,
+    Technical_Skills:String,
+    Non_Technical_Skills:String,
+    Career_Option:String,
+    visiontnp:String,
+    conttribution:String,
+    expectationfromcell:String,
+    othercell:String
+
+
+
+
+
+
+
+
+
 
 });
 

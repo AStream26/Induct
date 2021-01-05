@@ -9,11 +9,11 @@ const tourrouter = express.Router();
 
 
 //creating and mounting router
-tourrouter.route('/get-5-cheap').get(tourcontrol.aliasing,tourcontrol.getAlltour);
-tourrouter.route('/get-tour-stats').get(tourcontrol.getstats);
-tourrouter.route('/get-monthly-plans/:year').get(tourcontrol.getmonthelyplan);
+// tourrouter.route('/get-5-cheap').get(tourcontrol.aliasing,tourcontrol.getAlltour);
+// tourrouter.route('/get-tour-stats').get(tourcontrol.getstats);
+// tourrouter.route('/get-monthly-plans/:year').get(tourcontrol.getmonthelyplan);
 
-tourrouter.route('/').get(tourcontrol.getAlltour).post(tourcontrol.newtour);
-tourrouter.route('/:id').get(tourcontrol.gettour).patch(tourcontrol.updatetour).delete(tourcontrol.deletetour);
+//tourrouter.route('/').get(tourcontrol.getAlltour).post(tourcontrol.newtour);
+tourrouter.route('/:id').get(tourcontrol.gettour);
 
 module.exports = tourrouter;

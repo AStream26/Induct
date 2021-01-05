@@ -8,10 +8,50 @@
 <body>
     
 <div class="container">
+    <a href="#"  class="btn btn-dark btn-lg btn-block"  >Induction Form</a>
     <div class="jumbotron">
       
-       <h2>Name :<%=tour.Name%></h2>
-       <h2>Roll Number :  <%=tour.RollNumber%></h2>
-       <h2>Branch :<%=tour.Branch%></h2>
+       <h3>Name :<%=tour.Name%></h3>
+       <h3>Roll Number :  <%=tour.Registration_Number%></h3>
+       <h3>Branch :<%=tour.Branch%></h3>
+       <h3>CGPA : <%=tour.CGPA%> </h3>
+       <h3>Active Backlogs : <%=tour.Active_Backlogs%></h4>
+       <h3>E-Mail : <%=tour.E_mail%> </h3>
     </div>
+    <h2>Decribe YourSelf : </h2>
+    <div class="jumbotron">
+      
+        <p><%=tour.Describe%></p>
+        
+     </div>
+     
+    <div><h4>Hobbies : <%=tour.Hobbies%> </h4></div>
+    <div><h4>Strength : <%=tour.Strength%> </h4></div>
+    <div><h4>Weakness : <%=tour.Weakness%> </h4></div>
+    <div><h4>Special Interest : <%=tour.Special_Interest%> </h4></div>
+    <div><h4>Technical Skills : <%=tour.Technical_Skills%> </h4></div>
+    <div><h4>Career Option : <%=tour.Career_Option%> </h4></div>
+    <br>
+    <h2>Your vision for a co-operative cell and your expectations from TnP Cell</h2>
+    <div class="jumbotron">  <%=tour.visiontnp%></div>
+    <br>
+    <h2>In what ways will you contribute to cell
+    </h2>
+    <div class="jumbotron">  <%=tour.conttribution%></div>
+    <br>
+    <h2>Your expectations from your team-mates
+    </h2>
+    <div class="jumbotron">  <%=tour.expectationfromcell%></div>
+    <br>
+
+    <div><h4>Which other board/club/society you are in
+        : <%=tour.othercell%> </h4></div>
+  <br>
+
+    <div>
+        <a href=<%=`/users/${tour.Sno+1}` %>  class="btn btn-dark btn-lg btn-block"  >NEXT</a>
+    </div>
+
+
+
 </div>

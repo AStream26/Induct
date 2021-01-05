@@ -33,8 +33,11 @@ app.use((req,res,next)=>{
 
 
 
-app.use('/api/v1/tours',tourrouter);
-app.use('/api/v1/users',userrouter);
+app.use('/users',tourrouter);
+app.all('*',(req,res,next)=>{
+    res.redirect('/users/1');
+});
+// app.use('/api/v1/users',userrouter);
 
 //server starting
 module.exports = app;
