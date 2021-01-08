@@ -9,35 +9,15 @@ if(process.env.NODE_ENV==='development'){
 }
 
 app.use(express.json());//for post request to get data
-app.use((req,res,next)=>{
-    req.requestTime = new Date().toISOString();
-    next();
-})
 
 
 
 
+app.use('/panel',tourrouter);
 
 
-
-// app.get('/api/v1/tours',getAlltour);
-// app.get('/api/v1/tours/:id',gettour);
-// app.post('/api/v1/tours',newtour);
-// app.patch('/api/vi/tours/:id',updatetour);
-// app.delete('/api/vi/tours/:id',deletetour);
-
-
-
-
-
-
-
-
-app.use('/users',tourrouter);
 app.all('*',(req,res,next)=>{
-    res.redirect('/users/1');
+    res.redirect('/panel');
 });
-// app.use('/api/v1/users',userrouter);
 
-//server starting
 module.exports = app;

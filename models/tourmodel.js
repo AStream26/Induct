@@ -21,8 +21,12 @@ const Data = mongoose.Schema({
     visiontnp:String,
     conttribution:String,
     expectationfromcell:String,
-    othercell:String
-
+    othercell:String,
+    panel:String,
+    Q1 :String,
+    Q2 :String,
+    Q3 :String,
+    Q4 :String
 
 
 
@@ -34,34 +38,7 @@ const Data = mongoose.Schema({
 
 });
 
-// tourSchema.virtual('durationweek').get(function(){
-//     return this.duration/7;
-// });
-// //DOCUMENT MIDDLEWARE
-// // tourSchema.pre('save',function(){
-// //       this.slug = slugify(this.name,{lower:true});
-// // });
 
-// // tourSchema.post('save',function(doc,next){
-// //      console.log(doc);
-// //      next();
-// // });
-// //QUERY MIIDLEWARE
-// tourSchema.pre(/^find/,function(next){
-//      this.find({secretTour:{$ne:true}});
-//      this.start = Date.now();
-//      next();
-// });
-// tourSchema.post(/^find/,function(docs,next){
-//     console.log(Date.now()-this.start);
-//     next();
-// });
-
-// //AGGREGATE MIDDDLEWARE
-// tourSchema.pre('aggregate',function(next){
-//     this.pipeline().unshift({$match:{secretTour:{$ne:true}}});
-// next();
-// });
 const data = mongoose.model('Data',Data);
 module.exports = data;
 

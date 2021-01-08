@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Traing And Placement Cell</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	
+  <title>Traing And Placement Cell</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
 </head>
 <body>
     
 <div class="container">
-    <a href="#"  class="btn btn-dark btn-lg btn-block"  >Induction Form</a>
+    <a href="/panel"  class="btn btn-dark btn-lg btn-block"  >Induction Form</a>
     <div class="jumbotron">
+        
       
        <h3>Name :<%=tour.Name%></h3>
        <h3>Roll Number :  <%=tour.Registration_Number%></h3>
@@ -18,40 +19,70 @@
        <h3>Active Backlogs : <%=tour.Active_Backlogs%></h4>
        <h3>E-Mail : <%=tour.E_mail%> </h3>
     </div>
-    <h2>Decribe YourSelf : </h2>
+    <h4>Decribe YourSelf : </h4>
     <div class="jumbotron">
       
         <p><%=tour.Describe%></p>
         
      </div>
-     
-    <div><h4>Hobbies : <%=tour.Hobbies%> </h4></div>
-    <div><h4>Strength : <%=tour.Strength%> </h4></div>
-    <div><h4>Weakness : <%=tour.Weakness%> </h4></div>
-    <div><h4>Special Interest : <%=tour.Special_Interest%> </h4></div>
-    <div><h4>Technical Skills : <%=tour.Technical_Skills%> </h4></div>
-    <div><h4>Career Option : <%=tour.Career_Option%> </h4></div>
+     <br>
+     <br>
+    <div><h5>Hobbies : <%=tour.Hobbies%> </h5></div>
     <br>
-    <h2>Your vision for a co-operative cell and your expectations from TnP Cell</h2>
+    <div><h5>Strength : <%=tour.Strength%> </h5></div>
+    <br>
+    <div><h5>Weakness : <%=tour.Weakness%> </h5></div>
+    <br>
+    <div><h5>Special Interest : <%=tour.Special_Interest%> </h5></div>
+    <br>
+    <div><h5>Technical Skills : <%=tour.Technical_Skills%> </h5></div>
+    <br>
+    <div><h5>Career Option : <%=tour.Career_Option%> </h5></div>
+    <br>
+    <br>
+    <h4>Your vision for a co-operative cell and your expectations from TnP Cell</h4>
     <div class="jumbotron">  <%=tour.visiontnp%></div>
     <br>
-    <h2>In what ways will you contribute to cell
-    </h2>
+    <h4>In what ways will you contribute to cell
+    </h4>
     <div class="jumbotron">  <%=tour.conttribution%></div>
     <br>
-    <h2>Your expectations from your team-mates
-    </h2>
+    <h4>Your expectations from your team-mates
+    </h4>
     <div class="jumbotron">  <%=tour.expectationfromcell%></div>
     <br>
+    <div><h5>Which other board/club/society you are in
+      : <%=tour.othercell%> </h5></div>
+<br>
+<br>
+    <h5>Q1). For an instance, think of yourself as a T&P Member, now while carrying out your responsibilities you are provided with some heavy work and the work needs to be completed in an hour. How will you complete the work within the deadline?
 
-    <div><h4>Which other board/club/society you are in
-        : <%=tour.othercell%> </h4></div>
-  <br>
+    </h5>
+    <div class="jumbotron">  <%=tour.Q1%></div>
+    <br>
+    <h5>Q2). Suppose while working as a T&P Co-Ordinator, the HR of some well established company tells you that there is only 1 job opening and the HR will give the job to that person who will meet the HR very first next day. Now, you have a senior who is a T&P Member and he is in grave search of job and you know this senior personally. Will you tell about the job opening and what HR told you to this senior or will you tell this news to the entire batch of 2022?
 
-  <div class="row">
-    <div class="col"><a href=<%=`/users/${tour.Sno-1}` %>  class="btn btn-dark btn-lg btn-block"  >BACK</a></div>
-    <div class="col"><a href=<%=`/users/${tour.Sno+1}` %>  class="btn btn-dark btn-lg btn-block"  >NEXT</a></div>
-</div>
+    </h5>
+    <div class="jumbotron">  <%=tour.Q2%></div>
+    <br>
+    <h5>Q3). As a T&P Coordinator, you have been asked to accompany the HR from the airport to college and the HR is from a well reputed company where you always want to have an internship or a job. So, during your journey from airport to college with the HR, will you ask him/her to provide you an internship?
+
+    </h5>
+    <div class="jumbotron">  <%=tour.Q3%></div>
+    <br>
+    <h5>Q4).  There is a company which has blacklisted our university due to some serious issues and the duration of this has just ended a month ago. Now, how you will approach this company to resume campus recruitment in our university?
+
+    </h5>
+    <div class="jumbotron">  <%=tour.Q4%></div>
+    <br>
+
+   
+
+    <div class="row">
+        <div class="col"><a href=<%=`/panel/${tour.panel}/${tour.Sno-1}` %>  class="btn btn-dark btn-lg btn-block"  >BACK</a></div>
+        <div class="col"><a href=<%=`/panel/${tour.panel}/${tour.Sno+1}` %>  class="btn btn-dark btn-lg btn-block"  >NEXT</a></div>
+    </div>
+
 
 
 </div>

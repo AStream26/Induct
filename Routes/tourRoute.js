@@ -2,18 +2,14 @@ const tourcontrol = require('../controllers/tourcontrol.js');
 const express = require('express');
 const app = express();
 const tourrouter = express.Router();
-// tourrouter.param('id',tourcontrol.checkid);
 
 
+tourrouter.route('/').get(tourcontrol.home);
+tourrouter.route('/p1/:id').get(tourcontrol.gettour('p1'));
+tourrouter.route('/p2/:id').get(tourcontrol.gettour('p2'));
+tourrouter.route('/p3/:id').get(tourcontrol.gettour('p3'));
+tourrouter.route('/p4/:id').get(tourcontrol.gettour('p4'));
 
-
-
-//creating and mounting router
-// tourrouter.route('/get-5-cheap').get(tourcontrol.aliasing,tourcontrol.getAlltour);
-// tourrouter.route('/get-tour-stats').get(tourcontrol.getstats);
-// tourrouter.route('/get-monthly-plans/:year').get(tourcontrol.getmonthelyplan);
-
-//tourrouter.route('/').get(tourcontrol.getAlltour).post(tourcontrol.newtour);
-tourrouter.route('/:id').get(tourcontrol.gettour);
+//tourrouter.route('/:id').get(tourcontrol.gettour);
 
 module.exports = tourrouter;
