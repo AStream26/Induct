@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const tourrouter = express.Router();
 
-
 tourrouter.route('/').get(tourcontrol.home);
 tourrouter.route('/p1/:id').get(tourcontrol.gettour('p1'));
 tourrouter.route('/p2/:id').get(tourcontrol.gettour('p2'));
